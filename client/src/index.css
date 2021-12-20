@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main: #191919;
+  --sec: #d87d4a;
+  --alert-green: #38A169;
+}
+.manrope {
+  font-family: 'Manrope', sans-serif;
+}
+/* helpers/extracted classes */
+.paddingXMain{
+  @apply xl:px-40 lg:px-20 md:px-16 sm:px-8 px-4;
+}
+.paddingTopMain{
+  @apply xl:mt-40 lg:mt-36 md:mt-24 mt-20;
+}
+.responsiveButton {
+  @apply lg:p-3 md:p-2 p-1 lg:w-40 md:w-32 w-24 border-black border-2 lg:text-base md:text-sm text-xs;
+}
+.responsiveButtonProduct{
+  @apply lg:p-3 p-2 lg:w-40 w-28; 
+}
+.modalButton {
+  @apply hover:opacity-80 font-bold py-2 md:px-3 px-2 lg:text-base text-sm rounded;
+}
+.productSecText {
+  @apply font-bold xl:text-3xl lg:text-2xl md:text-xl text-lg;
+}
+.productPriText {
+  @apply font-bold xl:text-6xl lg:text-4xl md:text-3xl text-2xl;
+}
+.tracking{
+  @apply xl:tracking-widest lg:tracking-wider md:tracking-wide tracking-wide;
+}
+.categoriesNameText{
+  @apply font-bold xl:text-5xl lg:text-4xl md:text-2xl sm:text-xl text-lg sm:text-left text-center;
+}
+.categoriesDescText{
+  @apply text-gray-400 xl:my-8 md:my-4 my-2 xl:text-lg lg:text-base md:text-sm text-xs;
+}
+.productDescText{
+  @apply xl:text-lg lg:text-base md:text-sm text-xs;
+}
+.miniNavText {
+  @apply xl:text-xl lg:text-lg md:text-base sm:text-sm text-xs;
+}
+.categoriesTextMarginRight {
+  @apply xl:mr-28 lg:mr-20 md:mr-16 sm:mr-8 mr-4;
+}
+.categoriesTextMarginLeft {
+  @apply xl:ml-28 lg:ml-20 md:ml-16 sm:ml-8 ml-4;
+}
+.categoriesNewProductText{
+  @apply xl:text-xl lg:text-lg md:text-base text-sm;
+}
+.categoriesWidth {
+  @apply xl:w-3/5 md:w-4/5 w-5/6;
+}
+.categoriesImage {
+  width: 50%;
+  height:  50%;
+}
+.miniNavImage {
+  @apply absolute xl:w-40 lg:w-32 md:w-24 w-16 xl:-mt-40 lg:-mt-32 md:-mt-24 -mt-16 filter md:drop-shadow-lower drop-shadow-upper transition duration-200 ease-in-out transform hover:scale-125;
+}
+.heroImage {
+  @apply md:ml-0 sm:-ml-12 -ml-16 h-auto w-full object-contain;
+}
+.heroContainer {
+  @apply font-normal w-full h-5/6 flex bg-main overflow-hidden;
+  }
+.categoriesMarginTop {
+  @apply xl:mt-40 lg:mt-32 md:mt-28 mt-16;
+}
+.categoriesPaddingBottom{
+  @apply md:pb-20 pb-10;
+}
+.modal-open{
+  overflow: hidden;
+}

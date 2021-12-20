@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Order # {{order_id}} at Audiophile</title>
+  <style>
+    .text-right {
+      text-align: right;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+    .text-center {
+      text-align: center;
+    }
+
+    .p-4 {
+      padding: 0.5rem;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .border-top {
+      border-top: 1px solid black;
+    }
+
+    .text-sec {
+      color: #d87d4a;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .w-80 {
+      width: 80%;
+    }
+
+    .w-50 {
+      width: 50%;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      border: 1px solid black;
+    }
+
+    .productImage {
+      border-radius: 10px;
+      height: 75px;
+      width: 75px;
+    }
+
+    .header {
+      background: black;
+      width: 100%;
+      display: flex;
+      border-radius: 6px;
+    }
+
+    .headerImage {
+      width: 33%;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img src="https://i.imgur.com/gLO31pG.png" alt="audiophile" class="headerImage">
+  </div>
+
+  <h3>Hello {{username}}, </h3>
+  <p>thank you for you order with Audiophile. Your payment successfully went through and we will be shipping your
+    order shortly!</p>
+  <br>
+  <table class="w-80">
+    <tbody>
+      {{#each items}}
+      <tr>
+        <td class="p-4 text-center">
+          <img src="{{this.item_image}}" class="productImage" />
+        </td>
+        <td class="p-4 text-left">{{this.item_name}}</td>
+        <td class="p-4 text-left">x {{this.item_amount}}</td>
+        <td class="p-4 text-left">{{this.item_price}}</td>
+      </tr>
+      {{/each}}
+      <tr class="border-top">
+        <td></td>
+        <td></td>
+        <td class="p-4 text-left font-bold">Shipping</td>
+        <td class="p-4 text-left font-bold">{{order_shipping}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="p-4 text-left font-bold text-sec">Total</td>
+        <td class="p-4 text-left font-bold">{{order_total}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  {{#if billing}}
+  <br>
+  <p>Address for billing purposes:</p>
+  <br>
+
+  <table>
+    <tbody>
+      <tr>
+        <td class="p-4 text-right font-bold">Phone</td>
+        <td class="p-4 text-left">{{billing.phone}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">Name</td>
+        <td class="p-4 text-left">{{billing.name}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">Address</td>
+        <td class="p-4 text-left">{{billing.address}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">Zip</td>
+        <td class="p-4 text-left">{{billing.zip}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">City</td>
+        <td class="p-4 text-left">{{billing.city}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">Country</td>
+        <td class="p-4 text-left">{{billing.country}}</td>
+      </tr>
+    </tbody>
+  </table>
+  {{/if}}
+
+  <br>
+  <p>Items will be sent to the following shipping address:</p>
+  <br>
+
+  <table>
+    <thead>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="p-4 text-right font-bold">Phone</td>
+        <td class="p-4 text-left">{{address.phone}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">Name</td>
+        <td class="p-4 text-left">{{address.name}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">Address</td>
+        <td class="p-4 text-left">{{address.address}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">Zip</td>
+        <td class="p-4 text-left">{{address.zip}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">City</td>
+        <td class="p-4 text-left">{{address.city}}</td>
+      </tr>
+      <tr>
+        <td class="p-4 text-right font-bold">Country</td>
+        <td class="p-4 text-left">{{address.country}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>If there is a problem with the order do not hesitate to contact us!</p>
+  <br>
+  <p>Sincerely, Audiophile support team</p>
+</body>
+
+</html>

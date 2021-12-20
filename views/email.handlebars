@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge"> 
+  <title>Password reset for Audiophile</title>
+</head>
+
+<body>
+  <div style="background: black; width: 100%; display: flex; border-radius: 6px;">
+    <img src="https://i.imgur.com/gLO31pG.png" alt="audiophile" style="width: 33%; padding: 10px;">
+  </div>
+
+  <h3>Hello {{name}}, </h3>
+  <p>a password reset was started for your account! If this request was initiated by you follow this link to reset your
+    password:</p>
+  <div style="width: 100%; text-align:center">
+    <a style="font-weight: bold; font-size: 1.5rem; text-decoration: none; cursor: pointer;" href="{{address}}">
+      <button
+        style="background:#d87d4a; padding: 10px; border: none; border-radius: 6px; color: white; font-weight: bold; "
+        onMouseOver="this.style.opacity='0.8'" onMouseOut="this.style.opacity='1'">Click here to reset your
+        password</button>
+    </a>
+  </div>
+
+  <p>If you did not reset your password, we advise to change your password to prevent any attempts to gain access to
+    your account.</p>
+    <br>
+  <p>Sincerely, Audiophile support team</p>
+</body>
+
+</html>
