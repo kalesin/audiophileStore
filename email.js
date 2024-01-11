@@ -1,5 +1,3 @@
-import credentials from "credentials.js"
-
 function sendMail(mailOptions, isOrderEmail) {
     const hbs = require('nodemailer-express-handlebars')
     //const hbs = require('express-handlebars');
