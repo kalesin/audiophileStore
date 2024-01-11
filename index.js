@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3001;
@@ -34,8 +35,9 @@ app.use((req, res, next) => {
     next()
 })
 
+//log all database, credentials, stipe secrets saved in process.env
+console.log(process.env);
 //use specific port
-console.log(process.env.DATABASE_URL)
 app.listen(port, () => console.log(`Listening on port ${port}`))
 
 //stripe

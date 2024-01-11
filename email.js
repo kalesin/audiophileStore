@@ -6,9 +6,13 @@ function sendMail(mailOptions, isOrderEmail) {
     const nodemailer = require('nodemailer')
     const path = require('path')
     // initialize nodemailer
+    console.log(process.env);
     var transporter = nodemailer.createTransport({
         service: 'gmail',
-        auth: credentials
+        auth: {
+            user: process.env.CREDENTIALS_USER,
+            pass: process.env.CREDENTIALS_PASS
+        }
     });
     // point to the template folder
     const handlebarOptions = {
