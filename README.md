@@ -1,3 +1,7 @@
+# ⚠️WARNING NOTICE⚠️
+### This repository was created for learning/demo purposes only.
+### It does not highlight my current skills and is not actively maintained.
+
 # Audiophile E-commerce Store
 The store is written in Vue.js and TailwindCSS on the front-end, using Postgres, Express and Node.js on the backend. For a secure experience I hash passwords and use JSON Web Tokens(JWT) for persistent user sessions. 
 
@@ -10,4 +14,3 @@ I expanded the store front to include some basic animations, checkout payments w
  
 # Usage
 If you wish to test the Stripe payments integration, please use the card number 4242 4242 4242 4242, combined with any future date of expiry and any CVC code.
-
