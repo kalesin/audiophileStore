@@ -4,9 +4,9 @@ function sendMail(mailOptions, isOrderEmail) {
     const nodemailer = require('nodemailer')
     const path = require('path')
     // initialize nodemailer
-    console.log(process.env);
+    console.log('nodemailer credentials', process.env.CREDENTIALS_USER, process.env.CREDENTIALS_PASS);
     var transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: 'hotmail',
         auth: {
             user: process.env.CREDENTIALS_USER,
             pass: process.env.CREDENTIALS_PASS
