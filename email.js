@@ -6,13 +6,7 @@ function sendMail(mailOptions, isOrderEmail) {
     // initialize nodemailer
     console.log('nodemailer credentials', process.env.CREDENTIALS_USER, process.env.CREDENTIALS_PASS);
     var transporter = nodemailer.createTransport({
-        host: "smtp-mail.outlook.com", // hostname
-        secureConnection: false, // TLS requires secureConnection to be false
-        port: 587, // port for secure SMTP
-        tls: {
-           ciphers:'SSLv3'
-        },
-        //service: 'hotmail',
+        service: 'gmail',
         auth: {
             user: process.env.CREDENTIALS_USER,
             pass: process.env.CREDENTIALS_PASS
